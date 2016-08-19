@@ -1,3 +1,6 @@
+// Pull in application dependencies
+@import "susy";
+
 //-------------------------------
 // Set the front size of the HTML for easier rem sizing throughout
 //-------------------------------
@@ -10,4 +13,41 @@ html {
 body {
   font-family: sans-serif;
   background-color: #EEE;
+}
+
+$susy: (
+  columns: 16,
+  gutter-position: inside,
+  global-box-sizing: border-box,
+  debug: (
+    image: show,
+    output: overlay,
+  )
+);
+
+@include border-box-sizing;
+
+$map-small: (
+  columns: 6,
+  container: auto,
+  gutters: 0
+);
+
+$map-large: (
+  columns: 16,
+  container: 120rem,
+  gutters: 1/4
+);
+
+@media only screen and (min-width: 0) {
+  @include layout($map-small);
+}
+
+@media (min-width: 52rem) {
+  @include layout($map-large);
+}
+//-------------------------------
+
+.container {
+  @include container();
 }

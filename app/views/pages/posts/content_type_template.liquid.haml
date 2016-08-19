@@ -7,15 +7,16 @@ content_type: posts
 
 {% block content %}
 
-%h1 {{ post.title }}
-%p on {{ post.posted_at | localized_date: '%m/%d/%Y' }}
-.tags
-  {% for tag in post.tags %}
-  %span.label {{ tag | escape }}
-  {% endfor %}
+.container
+  %h1 {{ post.title }}
+  %p on {{ post.posted_at | localized_date: '%m/%d/%Y' }}
+  .tags
+    {% for tag in post.tags %}
+    %span.label {{ tag | escape }}
+    {% endfor %}
 
-%img(src="{{ post.image.url | resize: '400x200#' }}" alt="{{ post.title | escape }}")
+  %img(src="{{ post.image.url | resize: '400x200#' }}" alt="{{ post.title | escape }}")
 
-%p {{ post.body }}
+  %p {{ post.body }}
 
 {% endblock %}

@@ -7,11 +7,12 @@ handle: home
 {% extends 'layouts/default' %}
 {% block content %}
 
-%h1 {{ page.title }}
-%ul
-  {% for post in contents.posts %}
-  %li
-    %a(href="{% path_to post %}") {{ post.title }}
-  {% endfor %}
+.container
+  %h1 {{ page.title }}
+  %ul
+    {% for post in contents.posts %}
+    %li
+      %a(href="{% path_to post %}") {{ post.title }}
+    {% endfor %}
 
 {% endblock %}
