@@ -13,10 +13,11 @@ is_layout: false
     {{ 'application.css' | stylesheet_tag }}
 
   %body
-    {% include 'nav' %}
+    .body
+      {% include 'nav' %}
 
-    {% block content %}
-    {% endblock %}
+      {% block content %}
+      {% endblock %}
 
-    {{ 'jquery.min.js' | javascript_tag }}
-    {{ 'application.js' | javascript_tag }}
+      {{ 'jquery.min.js' | javascript_tag }}
+      {{ 'application.js' | javascript_tag }}

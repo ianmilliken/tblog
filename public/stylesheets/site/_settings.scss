@@ -10,8 +10,13 @@
 // 1. Typography
 // ---------
 $html_font_size: 62.5%;
+$body_font_size: 1.6rem;
+$body_font_family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$header_lineheight: 1.4;
+$paragraph_lineheight: 1.6;
+
 $font_smoothing: antialiased;
-$font-family-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-rendering: optimizeLegibility;
 
 // 2. Colors
 // ---------
@@ -24,9 +29,13 @@ $white: #fefefe;
 html {
   font-size: $html_font_size;
   -webkit-font-smoothing: $font_smoothing;
+  -webkit-font-rendering: $font_rendering;
 }
 
 body {
-  font-family: $font-family-body;
+  font-family: $body_font_family;
+  font-size: $body_font_size;
   background-color: $white;
+  border-top: 1rem $primary_color solid;
+  margin: 0;
 }
