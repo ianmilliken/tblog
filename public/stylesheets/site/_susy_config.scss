@@ -1,20 +1,3 @@
-// Pull in application dependencies
-@import "susy";
-
-//-------------------------------
-// Set the front size of the HTML for easier rem sizing throughout
-//-------------------------------
-html {
-  font-size: 62.5%;
-  -webkit-font-smoothing: antialiased;
-}
-//-------------------------------
-
-body {
-  font-family: sans-serif;
-  background-color: #EEE;
-}
-
 $susy: (
   columns: 16,
   gutter-position: inside,
@@ -45,9 +28,4 @@ $map-large: (
 
 @media (min-width: 52rem) {
   @include layout($map-large);
-}
-//-------------------------------
-
-.container {
-  @include container();
 }

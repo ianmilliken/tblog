@@ -12,5 +12,8 @@
  *
  */
 
+// Pull in application dependencies
+@import "susy";
+
 // Pull in application stylesheets
-@import "site/settings";
+@import "site/index";

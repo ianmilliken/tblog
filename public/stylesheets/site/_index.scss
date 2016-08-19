@@ -3,8 +3,5 @@
 // All rights reserved
 
 // Pull in application stylesheets here
+@import "susy_config";
 @import "settings";
-
-.container {
-  @include container();
-}
