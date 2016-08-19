@@ -3,9 +3,9 @@ title: Post template page
 content_type: posts
 ---
 
-{% extends 'index' %}
+{% extends 'layouts/default' %}
 
-{% block main %}
+{% block content %}
 
 %h1 {{ post.title }}
 %p on {{ post.posted_at | localized_date: '%m/%d/%Y' }}

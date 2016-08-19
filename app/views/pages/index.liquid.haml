@@ -1,21 +1,17 @@
 ---
 title: Home page
 published: true
+handle: home
 ---
-!!!
-%html{lang: "en"}
-  %head
-    %meta{charset: "utf-8"}
-    %title {{ site.name }}
-    %meta{name: "keywords", value: "{{ site.meta_keywords }}"}
-    %meta{name: "description", value: "{{ site.meta_description }}"}
-  %body
-    %h1 {{ page.title }}
-    {% block 'main' %}
-    %p Lorem ipsum....
-    {% endblock %}
-    %ul
-      {% for post in contents.posts %}
-      %li
-        %a(href="{% path_to post %}") {{ post.title }}
-      {% endfor %}
+
+{% extends 'layouts/default' %}
+{% block content %}
+
+%h1 {{ page.title }}
+%ul
+  {% for post in contents.posts %}
+  %li
+    %a(href="{% path_to post %}") {{ post.title }}
+  {% endfor %}
+
+{% endblock %}
