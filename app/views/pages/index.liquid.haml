@@ -14,3 +14,8 @@ published: true
     {% block 'main' %}
     %p Lorem ipsum....
     {% endblock %}
+    %ul
+      {% for post in contents.posts %}
+      %li
+        %a(href="{% path_to post %}") {{ post.title }}
+      {% endfor %}
