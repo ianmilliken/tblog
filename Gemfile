@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'locomotivecms_wagon', '~> 2.2.0.rc1'
 
-# gem 'guard-livereload', '~> 2.5.1'
+gem 'guard-livereload', '~> 2.5.1'
 
 group :development do
   # Mac OS X
@@ -19,6 +19,6 @@ end
 
 group :misc do
   # Add your extra gems here
-  # gem 'susy', require: 'susy'
+  gem 'susy', require: 'susy'
   # gem 'bourbon', require: 'bourbon'
 end
