@@ -22,7 +22,7 @@ content_type: posts
       mapboxgl.accessToken = 'pk.eyJ1IjoiaWFubWlsbGlrZW4iLCJhIjoiY2lzN2RoOW13MDAxOTJwbGoxNGszMXU3eSJ9.ysd82httIty2z9wBOvTXkw';
       var map = new mapboxgl.Map({ container: 'map', style: 'mapbox://styles/mapbox/streets-v9', zoom: 9,});
 
-  {% for map in contents.maps %}
+  {% for map in post.maps %}
   .map-type
     %p The map {{ map.title }} is located in {{ map.post.title }}!
     %p The longitude is {{ map.longitude }}
