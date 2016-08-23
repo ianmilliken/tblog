@@ -1,8 +1,8 @@
 development:
   host: localhost:3000
-  handle: tblog
+  handle: travel_blog
   email: ianmilliken@live.co.uk
-  api_key: d77ea3f0acf990b86e88a00bc545d2bfef3ecb88
+  api_key: 0b87cdfcc21ef6f7c9bbbdecf97aaec3b6a6e193
 
 # staging:
 #   host: staging.example.com
