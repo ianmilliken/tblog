@@ -17,11 +17,6 @@ content_type: posts
 
   %img(src="{{ post.image.url | resize: '400x200#' }}" alt="{{ post.title | escape }}")
 
-  #map(style="width: 400px; height: 300px;")
-    %script
-      mapboxgl.accessToken = 'pk.eyJ1IjoiaWFubWlsbGlrZW4iLCJhIjoiY2lzN2RoOW13MDAxOTJwbGoxNGszMXU3eSJ9.ysd82httIty2z9wBOvTXkw';
-      var map = new mapboxgl.Map({ container: 'map', style: 'mapbox://styles/mapbox/streets-v9', zoom: 9,});
-
   // @FIXME 'with_scope post: post' checks that the map(s) in 'contents.maps'
   // belongs to this post, so we should not see the whole list of maps listed
   // here like previously
@@ -32,7 +27,7 @@ content_type: posts
     %p The longitude is {{ map.longitude }}
     %p The latitude is {{ map.latitude }}
 
-  #custommap2(style="width: 400px; height: 300px;")
+  #custommap2(style="width: 100%; height: 300px;")
     %script
       mapboxgl.accessToken = 'pk.eyJ1IjoiaWFubWlsbGlrZW4iLCJhIjoiY2lzN2RoOW13MDAxOTJwbGoxNGszMXU3eSJ9.ysd82httIty2z9wBOvTXkw';
       var long = {{ map.longitude }};
