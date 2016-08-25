@@ -1,0 +1,19 @@
+$title_color: #2C3644;
+
+.navbar-brand {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: $title_color;
+  letter-spacing: -0.048rem;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  &__link {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $title_color;
+    letter-spacing: 0.042rem;
+    text-transform: uppercase;
+  }
+}
