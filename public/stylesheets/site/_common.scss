@@ -17,3 +17,9 @@ p {
   @include container();
   padding: 0 2rem;
 }
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
