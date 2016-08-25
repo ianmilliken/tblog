@@ -4,7 +4,7 @@
     %ul.site-nav__list
       {% for page_in_nav in site.pages %}
       {% if page_in_nav.depth == 1 %}
-      %li{class: "site-nav__list-item {% if page.fullpath == page_in_nav.fullpath %}active{% endif %}" }
+      %li(class="site-nav__list-item {% if page.fullpath == page_in_nav.fullpath %}active{% endif %}" )
         %a.site-nav__link(href="{% path_to page_in_nav %}") {{ page_in_nav.title }}
       {% endif %}
       {% endfor %}
