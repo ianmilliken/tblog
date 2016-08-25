@@ -9,9 +9,13 @@
 
 // 1. Typography
 // ---------
+@import 'https://fonts.googleapis.com/css?family=Kalam:300|Merriweather:300,300i,700|Open+Sans:400,600,700';
+
 $html_font_size: 62.5%;
 $body_font_size: 1.6rem;
-$body_font_family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif_font: 'Merriweather', serif;
+$sans_font: 'Open Sans', sans-serif;
+$cursive_font: 'Kalam', cursive;
 $header_lineheight: 1.4;
 $paragraph_lineheight: 1.6;
 
@@ -33,9 +37,13 @@ html {
 }
 
 body {
-  font-family: $body_font_family;
+  font-family: $sans_font;
   font-size: $body_font_size;
   background-color: $white;
   border-top: 1rem $primary_color solid;
   margin: 0;
+}
+
+p {
+  font-family: $serif_font;
 }
