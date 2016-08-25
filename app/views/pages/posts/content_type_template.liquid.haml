@@ -8,14 +8,20 @@ content_type: posts
 {% block content %}
 
 .container
-  %h1 {{ post.title }}
-  %p on {{ post.posted_at | localized_date: '%m/%d/%Y' }}
-  .tags
-    {% for tag in post.tags %}
-    %span.label {{ tag | escape }}
-    {% endfor %}
+  %article.j-post
+    %section.j-post__banner
+      %img(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
 
-  %img(src="{{ post.image.url | resize: '400x200#' }}" alt="{{ post.title | escape }}")
+    %section.j-post__heading
+      %h1 {{ post.title }}
+      %p on {{ post.posted_at | localized_date: '%m/%d/%Y' }}
+      .tags
+        {% for tag in post.tags %}
+        %span.label {{ tag | escape }}
+        {% endfor %}
+
+    %section.j-post__body
+      %p {{ post.body }}
 
   // @FIXME 'with_scope post: post' checks that the map(s) in 'contents.maps'
   // belongs to this post, so we should not see the whole list of maps listed
@@ -43,7 +49,5 @@ content_type: posts
       map.addControl(new mapboxgl.Geolocate({position: 'top-left'}));
   {% endfor %}
   {% endwith_scope %}
-
-  %p {{ post.body }}
 
 {% endblock %}
