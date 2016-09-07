@@ -7,12 +7,30 @@ handle: home
 {% extends 'layouts/default' %}
 {% block content %}
 
+.p-banner
+  {% for post in contents.posts %}
+  // Only render the last (latest) post here
+  {% if forloop.last == true %}
+  .p-banner__item
+    %img.p-banner__image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
+    .p-banner__location {{ post.location }}
+    .p-banner__title {{ post.title }}
+    .p-banner__teaser {{ post.teaser }}
+    %a.p-banner__button(href="{% path_to post %}") Read More
+  {% endif %}
+  {% endfor %}
+
 .container
-  %h1 {{ page.title }}
-  %ul
+  %ul.post-list
     {% for post in contents.posts %}
-    %li
-      %a(href="{% path_to post %}") {{ post.title }}
+    // Render all but the last (latest) posts here
+    {% if forloop.last == false %}
+    %li.post-item
+      %a.post-link(href="{% path_to post %}")
+        %img.post-image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
+        .post-title {{ post.title }}
+        .post-teaser {{ post.teaser }}
+    {% endif %}
     {% endfor %}
 
 {% endblock %}

@@ -1,0 +1,9 @@
+.p-banner {
+  & img {
+    width: 100%;
+    height: auto;
+    min-height: 30rem;
+    max-height: 56rem;
+    object-fit: cover;
+  }
+}
