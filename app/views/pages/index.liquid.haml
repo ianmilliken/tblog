@@ -23,6 +23,7 @@ handle: home
     {% endfor %}
 
 .container
+  {% if contents.posts.size > 1 %}
   %ul.post-list
     {% for post in contents.posts %}
     // Render all but the last (latest) posts here
@@ -34,5 +35,8 @@ handle: home
         .post-teaser {{ post.teaser }}
     {% endif %}
     {% endfor %}
+  {% else %}
+    %h2 No more posts!
+  {% endif %}
 
 {% endblock %}
