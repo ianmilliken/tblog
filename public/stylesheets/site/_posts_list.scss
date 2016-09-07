@@ -1,9 +1,62 @@
 .p-banner {
+  height: 80vh;
+  min-height: 40rem;
+  max-height: 80rem;
+  position: relative;
+  text-align: center;
   & img {
     width: 100%;
     height: auto;
     min-height: 30rem;
     max-height: 56rem;
     object-fit: cover;
+  }
+  &__background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__location {
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  &__title {
+    color: $white;
+    font-size: 7.6rem;
+    font-weight: 800;
+    letter-spacing: -0.15rem;
+    margin-bottom: 4.5rem;
+  }
+  &__teaser {
+    & p {
+      color: $white;
+      font-size: 2.7rem;
+      font-family: $cursive_font;
+      letter-spacing: -0.06rem;
+      margin-bottom: 4rem;
+    }
+  }
+  &__button {
+    font-family: $sans_font;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+    display: inline-block;
+    padding: 1rem 2.6rem;
+    background-color: $primary_color;
+    border-radius: 0.4rem;
+    border-bottom: 0.3rem solid #D72323;
+    color: $white;
+    text-transform: uppercase;
   }
 }

@@ -8,17 +8,19 @@ handle: home
 {% block content %}
 
 .p-banner
-  {% for post in contents.posts %}
-  // Only render the last (latest) post here
-  {% if forloop.last == true %}
-  .p-banner__item
-    %img.p-banner__image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
-    .p-banner__location {{ post.location }}
-    .p-banner__title {{ post.title }}
-    .p-banner__teaser {{ post.teaser }}
-    %a.p-banner__button(href="{% path_to post %}") Read More
-  {% endif %}
-  {% endfor %}
+  .container.u-center-group
+    {% for post in contents.posts %}
+    // Only render the last (latest) post here
+    {% if forloop.last == true %}
+    //%img.p-banner__image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
+    .p-banner__background(style="background-image: url({{ post.image.url }})")
+    .u-group
+      .p-banner__location {{ post.location }}
+      .p-banner__title {{ post.title }}
+      .p-banner__teaser {{ post.teaser }}
+      %a.p-banner__button(href="{% path_to post %}") Read More
+    {% endif %}
+    {% endfor %}
 
 .container
   %ul.post-list
