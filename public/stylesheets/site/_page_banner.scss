@@ -38,13 +38,11 @@
     margin-bottom: 4.5rem;
   }
   &__teaser {
-    & p {
-      color: $white;
-      font-size: 2.7rem;
-      font-family: $cursive_font;
-      letter-spacing: -0.06rem;
-      margin-bottom: 4rem;
-    }
+    color: $white;
+    font-size: 2.7rem;
+    font-family: $cursive_font;
+    letter-spacing: -0.06rem;
+    margin-bottom: 4rem;
   }
   &__button {
     font-family: $sans_font;
