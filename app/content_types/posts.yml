@@ -58,6 +58,13 @@ fields:
     hint: Enter the post tags
     localized: false
 
+- location:
+    label: Location
+    type: string
+    required: false
+    hint: Where are you now?
+    localized: false
+
 - teaser: # The lowercase, underscored name of the field
     label: Teaser # Human readable name of the field
     type: text

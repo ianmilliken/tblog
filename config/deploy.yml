@@ -1,8 +1,8 @@
 development:
   host: localhost:3000
-  handle: travel_blog
+  handle: twonewnatives
   email: ianmilliken@live.co.uk
-  api_key: 0b87cdfcc21ef6f7c9bbbdecf97aaec3b6a6e193
+  api_key: 98e557ec722a1a693e56d67531e4a1fec06de447
 
 # staging:
 #   host: staging.example.com
