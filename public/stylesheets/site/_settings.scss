@@ -24,7 +24,7 @@ $font-rendering: optimizeLegibility;
 
 // 2. Colors
 // ---------
-$primary_color: #9EF7B4;
+$primary_color: #FC5050;
 $black: #000;
 $white: #fefefe;
 
@@ -40,7 +40,6 @@ body {
   font-family: $sans_font;
   font-size: $body_font_size;
   background-color: $white;
-  border-top: 1rem $primary_color solid;
   margin: 0;
 }
 
