@@ -22,8 +22,9 @@ handle: home
     {% endif %}
     {% endfor %}
 
-.container
+.container.u-spacer
   {% if contents.posts.size > 1 %}
+  %h2(style="text-align: center") Latest journal entries
   %ul.post-list
     {% for post in contents.posts %}
     // Render all but the last (latest) posts here
@@ -36,7 +37,7 @@ handle: home
     {% endif %}
     {% endfor %}
   {% else %}
-  %h2 No more posts!
+  %h2(style="text-align: center") No more posts!
   {% endif %}
 
 {% endblock %}
