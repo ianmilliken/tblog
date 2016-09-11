@@ -1,20 +1,18 @@
-$title_color: #2C3644;
-
 .site-nav {
   &__logo {
     display: block;
     font-size: 2.4rem;
     font-weight: 600;
-    color: $title_color;
+    color: $secondary_color;
     letter-spacing: -0.048rem;
     text-transform: uppercase;
     padding: 3rem 0;
   }
   &__link {
     display: block;
+    color: $secondary_color;
     font-size: 1.4rem;
     font-weight: 600;
-    color: $title_color;
     letter-spacing: 0.042rem;
     text-transform: uppercase;
   }

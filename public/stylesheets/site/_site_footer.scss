@@ -1,0 +1,19 @@
+.site-footer {
+  &__list {
+
+  }
+  &__list-item {
+    display: inline-block;
+    &:not(:first-of-type) {
+      margin-left: 4rem;
+    }
+  }
+  &__link {
+    display: block;
+    color: $secondary_color;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.0042rem;
+    text-transform: uppercase;
+  }
+}
