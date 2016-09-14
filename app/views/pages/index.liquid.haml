@@ -32,8 +32,12 @@ handle: home
     %li.post-item
       %a.post-link(href="{% path_to post %}")
         %img.post-image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
-        .post-title {{ post.title }}
-        .post-teaser {{ post.teaser }}
+        .post-info
+          .post-title {{ post.title }}
+          .post-summary {{ post.teaser }}
+          .post-meta
+            .post-date {{ post.posted_at | date: '%a %d %b %Y' }}
+            .post-location {{ post.location }}
     {% endif %}
     {% endfor %}
   {% else %}
