@@ -7,19 +7,16 @@ content_type: posts
 
 {% block content %}
 
-.container
-  %article.j-post
-    %section.j-post__banner
-      %img(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
-
-    %section.j-post__heading
-      %h1 {{ post.title }}
-      %p on {{ post.posted_at | localized_date: '%m/%d/%Y' }}
-      .tags
-        {% for tag in post.tags %}
-        %span.label {{ tag | escape }}
-        {% endfor %}
-
+%article.j-post
+  %section.p-banner
+    .container.u-center-group
+      .p-banner__background(style="background-image: url({{ post.image.url }})")
+      .u-group
+        .p-banner__location {{ post.location }}
+        .p-banner__title {{ post.title }}
+        .p-banner__teaser {{ post.teaser }}
+        
+  .container
     %section.j-post__body
       %p {{ post.body }}
 
