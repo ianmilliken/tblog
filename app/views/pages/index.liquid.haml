@@ -36,7 +36,13 @@ handle: home
           .post-title {{ post.title }}
           .post-summary {{ post.teaser }}
           .post-meta
-            .post-date {{ post.posted_at | date: '%a %d %b %Y' }}
+            .post-author
+              %img.post-author__image(src="{{ post.author.image.url }}" alt="{{ post.author.first_name | escape }}")
+              .post-author__name
+                %span.raw by
+                {{ post.author.first_name }}&nbsp;
+              .post-date
+                %span.raw on {{ post.posted_at | date: '%a %d %b %Y' }}
             .post-location {{ post.location }}
     {% endif %}
     {% endfor %}

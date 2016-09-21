@@ -42,16 +42,28 @@
 }
 
 .post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   align-self: flex-end;
   font-size: 1.3rem;
   color: $primary_color;
   margin-top: 2rem;
 }
 
-.post-date {
-  float: left;
+.post-author {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 3.6rem;
+    overflow: hidden;
+    margin-right: 1rem;
+  }
 }
 
-.post-location {
-  float: right;
+.raw {
+  color: $secondary_color;
 }
