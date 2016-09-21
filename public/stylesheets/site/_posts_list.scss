@@ -64,6 +64,12 @@
   }
 }
 
+.post-location {
+  & .fa {
+    color: inherit;
+  }
+}
+
 .raw {
   color: $secondary_color;
 }
