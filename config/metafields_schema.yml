@@ -54,3 +54,8 @@
 #       type: select
 #       select_options: ['helvetica', 'Noto']
 
+brand:
+  fields:
+    logo:
+      type: image
+      hint: Your brand logo

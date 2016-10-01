@@ -1,6 +1,9 @@
 .site-footer {
-  &__list {
-
+  &__logo {
+    & img {
+      width: 10rem;
+      height: auto;
+    }
   }
   &__list-item {
     display: inline-block;

@@ -6,7 +6,11 @@
     color: $secondary_color;
     letter-spacing: -0.048rem;
     text-transform: uppercase;
-    padding: 3rem 0;
+    padding: 2rem 0;
+    & img {
+      width: 14rem;
+      height: auto;
+    }
   }
   &__link {
     display: block;

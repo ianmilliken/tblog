@@ -1,7 +1,8 @@
 %footer.site-footer
   .container
     .flexbox.u-spacer.u-border-top
-      %a.site-footer__logo{href: "{% path_to home %}"} {{ site.name }}
+      %a.site-footer__logo{href: "{% path_to home %}"}
+        %img(src="{{ site.metafields.brand.logo }}")
       %ul.site-footer__list
         %li.site-footer__list-item
           %a.site-footer__link(href="#") Journal
