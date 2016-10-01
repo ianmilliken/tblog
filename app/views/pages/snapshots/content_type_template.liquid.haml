@@ -7,6 +7,14 @@ content_type: snapshots
 
 {% block content %}
 
-%article.j-post Here I am!
+%article.j-post
+  %section
+    .container.u-center-group
+      .u-group
+        .title {{ snapshot.title }}
+
+  .container
+    %section.j-post__body
+      %p {{ snapshot.body }}
 
 {% endblock %}
