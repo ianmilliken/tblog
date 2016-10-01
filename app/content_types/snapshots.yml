@@ -36,9 +36,9 @@ order_by: manually
 # entry_template: '<a href="{{ link }}">{{ entry._label }}</a>' # The default template
 
 # A list describing each field
-fields: 
-- name: # The lowercase, underscored name of the field
-    label: Name # Human readable name of the field
+fields:
+- title: # The lowercase, underscored name of the field
+    label: Title # Human readable name of the field
     type: string
     required: true
     hint: Explanatory text displayed in the back office

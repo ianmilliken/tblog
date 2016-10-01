@@ -4,7 +4,6 @@ content_type: posts
 ---
 
 {% extends 'layouts/default' %}
-
 {% block content %}
 
 %article.j-post
@@ -15,7 +14,7 @@ content_type: posts
         .p-banner__location {{ post.location }}
         .p-banner__title {{ post.title }}
         .p-banner__teaser {{ post.teaser }}
-        
+
   .container
     %section.j-post__body
       %p {{ post.body }}

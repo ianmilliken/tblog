@@ -1,0 +1,61 @@
+---
+title: Journal
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# true if the page can be used as a layout for new pages created by the editors
+# is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# other unique identifier of this page. To be used with the path_to liquid tag.
+# handle: my-page-handle
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+{% extends 'layouts/default' %}
+{% block content %}
+
+.container.u-spacer
+  {% if contents.posts.size > 1 %}
+  {% editable_text page_title %}
+  %h2(style="text-align: center") Journal
+  {% endeditable_text %}
+  %ul.post-list
+    {% for post in contents.posts %}
+    %li.post-item
+      %a.post-link(href="{% path_to post %}")
+        %img.post-image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
+        .post-info
+          .post-title {{ post.title }}
+          .post-summary {{ post.teaser }}
+          .post-meta
+            .post-author
+              %img.post-author__image(src="{{ post.author.image.url }}" alt="{{ post.author.first_name | escape }}")
+              .post-author__name
+                %span.raw by
+                {{ post.author.first_name }}&nbsp;
+              .post-date
+                %span.raw on {{ post.posted_at | date: '%a %d %b %Y' }}
+            .post-location
+              %i.fa.fa-map-marker
+              {{ post.location }}
+    {% endfor %}
+  {% else %}
+  %h2(style="text-align: center") No more posts!
+  {% endif %}
+
+{% endblock %}
