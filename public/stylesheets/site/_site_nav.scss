@@ -12,11 +12,14 @@
       height: auto;
     }
   }
+  &__list {
+    line-height: 9rem;
+  }
   &__link {
     display: block;
     color: $secondary_color;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
     letter-spacing: 0.042rem;
     text-transform: uppercase;
   }
@@ -24,6 +27,9 @@
     display: inline-block;
     &:not(:first-of-type) {
       margin-left: 3rem;
+    }
+    &--active {
+      border-bottom: 0.4rem solid $primary_color;
     }
   }
 }
