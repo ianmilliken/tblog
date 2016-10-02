@@ -7,14 +7,13 @@ content_type: snapshots
 
 {% block content %}
 
-%article.j-post
-  %section
-    .container.u-center-group
-      .u-group
-        .title {{ snapshot.title }}
-
-  .container
-    %section.j-post__body
+%article.content
+  %header.container
+    .content-narrow
+      %h2 {{ snapshot.title }}
+      %p {{ snapshot.intro }}
+  %section.container
+    .snapshot-content__body
       %p {{ snapshot.body }}
 
 {% endblock %}

@@ -13,8 +13,8 @@ is_layout: false
     {{ 'application.css' | stylesheet_tag }}
 
     // @FIXME Inserting Mapbox directly here
-    %script(src="https://api.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.js")
-    %link(href="https://api.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.css" rel="stylesheet")
+    //%script(src="https://api.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.js")
+    //%link(href="https://api.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.css" rel="stylesheet")
 
   %body
     .body
@@ -27,3 +27,6 @@ is_layout: false
       {{ 'application.js' | javascript_tag }}
 
       {% include 'footer' %}
+
+      // @FIXME Inserting 500px embed directly here
+      //%script(src="https://500px.com/embed.js")

@@ -29,6 +29,13 @@ fields:
     hint: Enter the post publish date
     localized: false
 
+- intro: # The lowercase, underscored name of the field
+    label: Intro # Human readable name of the field
+    type: text
+    required: false
+    hint: Enter the intro text
+    localized: false
+
 - image: # The lowercase, underscored name of the field
     label: Image # Human readable name of the field
     type: file
