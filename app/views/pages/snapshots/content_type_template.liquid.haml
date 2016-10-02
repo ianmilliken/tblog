@@ -9,11 +9,12 @@ content_type: snapshots
 
 %article.content
   %header.container
-    .content-narrow
-      %h2 {{ snapshot.title }}
-      %p {{ snapshot.intro }}
+    .content-narrow.u-center
+      %h1 {{ snapshot.title }}
+      %p.content__intro {{ snapshot.intro }}
   %section.container
-    .snapshot-content__body
+    .content__body
       %p {{ snapshot.body }}
+      %script(src="https://500px.com/embed.js")
 
 {% endblock %}

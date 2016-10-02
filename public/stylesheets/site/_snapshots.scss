@@ -4,18 +4,25 @@
   margin-right: auto;
 }
 
-.snapshot-content {
+.content {
+  &__intro {
+    margin-top: 2rem;
+    font-size: 1.9rem;
+  }
   &__body {
-
+    & > * {
+      margin-top: 3rem;
+    }
+    & > p {
+      max-width: 76.8rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
-.pixels-photo {
-  & img {
-    width: 80%;
-    height: 50rem;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
-  }
+.embed-narrow {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
