@@ -32,4 +32,29 @@
       border-bottom: 0.4rem solid $primary_color;
     }
   }
+  &__hamburger {
+    & span {
+      display: block;
+      position: relative;
+      width: 1.6rem;
+      height: 0.2rem;
+      background-color: $secondary_color;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -0.6rem;
+        width: 1.6rem;
+        height: 0.2rem;
+        background-color: $secondary_color;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.6rem;
+        width: 1.6rem;
+        height: 0.2rem;
+        background-color: $secondary_color;
+      }
+    }
+  }
 }

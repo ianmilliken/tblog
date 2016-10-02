@@ -22,3 +22,21 @@
 .u-border-bottom {
   border-bottom: 0.1rem solid #E4E4E4;
 }
+
+@include bp-x-small {
+  .u-hide-for-small {
+    display: none;
+  }
+  .u-show-for-small {
+    display: inherit;
+  }
+}
+
+@include bp-medium {
+  .u-hide-for-small {
+    display: inherit;
+  }
+  .u-show-for-small {
+    display: none;
+  }
+}
