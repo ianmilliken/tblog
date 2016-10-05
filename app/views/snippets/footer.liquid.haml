@@ -12,11 +12,14 @@
           %a.site-footer__link(href="#") About Us
       %ul.social__list
         %li.social__list-item
-          %a.social__link(href="https://www.facebook.com/twonewnatives")
-            %i.fa.fa-facebook
+          %a.social__link(href="{{ site.metafields.social.facebook }}")
+            %i.fa.fa-facebook(aria-hidden="true")
         %li.social__list-item
-          %a.social__link(href="https://twitter.com/twonewnatives")
-            %i.fa.fa-twitter
+          %a.social__link(href="{{ site.metafields.social.twitter }}")
+            %i.fa.fa-twitter(aria-hidden="true")
         %li.social__list-item
-          %a.social__link(href="https://www.instagram.com/twonewnatives/")
-            %i.fa.fa-instagram
+          %a.social__link(href="{{ site.metafields.social.instagram }}")
+            %i.fa.fa-instagram(aria-hidden="true")
+        %li.social__list-item
+          %a.social__link(href="{{ site.metafields.social.500px }}")
+            %i.fa.fa-500px(aria-hidden="true")
