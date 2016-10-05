@@ -59,3 +59,17 @@ brand:
     logo:
       type: image
       hint: Your brand logo
+social:
+  fields:
+    facebook:
+      type: string
+      hint: Your brands Facebook URL
+    twitter:
+      type: string
+      hint: Your brands Twitter URL
+    instagram:
+      type: string
+      hint: Your brands Instagram URL
+    500px:
+      type: string
+      hint: Your brands 500px URL
