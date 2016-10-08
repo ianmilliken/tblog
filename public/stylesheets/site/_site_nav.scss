@@ -6,10 +6,15 @@
     color: $secondary_color;
     letter-spacing: -0.048rem;
     text-transform: uppercase;
-    padding: 2rem 0;
+    //padding: 2rem 0;
     & img {
       width: 14rem;
       height: auto;
+    }
+    & svg {
+      height: 6.4rem;
+      width: auto;
+      fill: $secondary_color;
     }
   }
   &__list {
