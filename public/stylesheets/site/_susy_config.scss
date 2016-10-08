@@ -2,10 +2,10 @@ $susy: (
   columns: 16,
   gutter-position: inside,
   global-box-sizing: border-box,
-  debug: (
+  /*debug: (
     image: show,
     output: overlay,
-  )
+  )*/
 );
 
 @include border-box-sizing;
