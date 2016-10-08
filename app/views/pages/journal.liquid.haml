@@ -34,6 +34,9 @@ published: true
   {% editable_text page_title %}
   %h2(style="text-align: center") Journal
   {% endeditable_text %}
+  {% editable_text page_info %}
+  %p(style="text-align: center") intro text...
+  {% endeditable_text %}
   %ul.post-list
     {% for post in contents.posts %}
     %li.post-item
