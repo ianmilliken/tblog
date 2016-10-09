@@ -37,8 +37,10 @@ published: true
   {% editable_text page_info %}
   %p(style="text-align: center") intro text...
   {% endeditable_text %}
+
+  {% paginate contents.posts by 2 %}
   %ul.post-list
-    {% for post in contents.posts %}
+    {% for post in paginate.collection %}
     %li.post-item
       %a.post-link(href="{% path_to post %}")
         %img.post-image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
@@ -57,6 +59,15 @@ published: true
               %i.fa.fa-map-marker
               {{ post.location }}
     {% endfor %}
+  .pagination
+    .pages Showing page {{ paginate.current_page }} of {{ paginate.total_pages }}
+    {% if paginate.previous %}
+    %a(href="?page={{ paginate.previous_page }}") Previous
+    {% endif %}
+    {% if paginate.next %}
+    %a(href="?page={{ paginate.next_page }}") Next
+    {% endif %}
+  {% endpaginate %}
   {% else %}
   %h2(style="text-align: center") No more posts!
   {% endif %}
