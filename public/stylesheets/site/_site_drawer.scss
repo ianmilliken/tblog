@@ -33,6 +33,29 @@
     letter-spacing: 0.1rem;
     padding: 1rem 0;
   }
+  &__close {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    &::before {
+      content: "";
+      background-color: $white;
+      position: absolute;
+      width: 3rem;
+      height: 0.4rem;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      content: "";
+      background-color: $white;
+      position: absolute;
+      width: 3rem;
+      height: 0.4rem;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .site-overlay {
