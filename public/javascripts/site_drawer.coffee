@@ -4,11 +4,5 @@ $(document).ready ->
   drawer = $('.site-drawer')
   hamburger.off()
   hamburger.on 'click', ->
-    overlay.css({
-      'z-index': 10,
-      'opacity': 0.9
-    })
-    drawer.css({
-      'z-index': 10,
-      'opacity': 1
-    })
+    overlay.addClass( 'site-overlay--active' )
+    drawer.addClass( 'site-drawer--active' )
