@@ -23,6 +23,10 @@
   border-bottom: 0.1rem solid #E4E4E4;
 }
 
+.u-after-site-nav {
+  padding-top: 11rem;
+}
+
 @include bp-x-small {
   .u-hide-for-small {
     display: none;
