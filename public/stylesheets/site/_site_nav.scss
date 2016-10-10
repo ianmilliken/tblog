@@ -2,8 +2,11 @@
   position: absolute;
   width: 100%;
   z-index: 5;
-  & > .container {
+  & .flexbox {
     border-bottom: 0.1rem solid #e4e4e4;
+  }
+  & .flexbox--light {
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
   }
   &__logo {
     display: block;

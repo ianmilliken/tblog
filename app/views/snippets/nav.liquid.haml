@@ -3,7 +3,7 @@
 {% if page.handle == 'home' or page.depth > 1 %}
 %nav.site-nav
   .container
-    .flexbox
+    .flexbox.flexbox--light
       %a.site-nav__logo.site-nav__logo--white{href: "{% path_to home %}"}
         //%img(src="{{ site.metafields.brand.logo }}")
         %svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 812.25 535.56")
