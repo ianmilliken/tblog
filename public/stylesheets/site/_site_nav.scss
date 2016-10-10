@@ -21,6 +21,11 @@
       width: auto;
       fill: $secondary_color;
     }
+    &--white {
+      & svg {
+        fill: $white;
+      }
+    }
   }
   &__list {
     line-height: 11rem;
@@ -28,10 +33,14 @@
   &__link {
     display: block;
     color: $secondary_color;
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: 0.042rem;
-    text-transform: uppercase;
+    //font-size: 1.3rem;
+    //font-weight: 700;
+    //font-weight: 600;
+    //letter-spacing: 0.042rem;
+    //text-transform: uppercase;
+    &--white {
+      color: $white;
+    }
   }
   &__list-item {
     display: inline-block;
