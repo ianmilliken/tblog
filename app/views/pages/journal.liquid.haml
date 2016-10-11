@@ -1,72 +1,49 @@
 ---
 title: Journal
-
-# true if the page is included in the menu
 listed: true
-
-# true if the page is published
 published: true
-
-# true if the page can be used as a layout for new pages created by the editors
-# is_layout: true
-
-# position among sibling pages
-# position: 1
-
-# sets a redirection to the given url (301)
-# redirect_url: "<url to a page or to a remote url>"
-
-# other unique identifier of this page. To be used with the path_to liquid tag.
-# handle: my-page-handle
-
-# content type that this page is templatizing
-# content_type: "<slug of one of the content types>"
-
-# editable_elements:
-#   'some_block/some_slug': "<text>"
-#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+handle: journal
 ---
 {% extends 'layouts/default' %}
 {% block content %}
 
 .container.u-spacer.u-after-site-nav
   {% if contents.posts.size > 1 %}
-  {% editable_text page_title %}
-  %h2(style="text-align: center") Journal
-  {% endeditable_text %}
-  {% editable_text page_info %}
-  %p(style="text-align: center") intro text...
-  {% endeditable_text %}
+  %header.listings-header
+    %h1.listings-header__title Journal
+    %p.listings-header__intro We’ve tried to keep track of the interesting things that go on day by day as best we can, and this is where we scribble it all down.
 
   {% paginate contents.posts by 2 %}
-  %ul.post-list
-    {% for post in paginate.collection %}
-    %li.post-item
-      %a.post-link(href="{% path_to post %}")
-        %img.post-image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
-        .post-info
-          .post-title {{ post.title }}
-          .post-summary {{ post.teaser }}
-          .post-meta
-            .post-author
-              %img.post-author__image(src="{{ post.author.image.url }}" alt="{{ post.author.first_name | escape }}")
-              .post-author__name
-                %span.raw by
-                {{ post.author.first_name }}&nbsp;
-              .post-date
-                %span.raw on {{ post.posted_at | date: '%a %d %b %Y' }}
-            .post-location
-              %i.fa.fa-map-marker
-              {{ post.location }}
-    {% endfor %}
-  .pagination
-    .pages Showing page {{ paginate.current_page }} of {{ paginate.total_pages }}
-    {% if paginate.previous %}
-    %a(href="?page={{ paginate.previous_page }}") Previous
-    {% endif %}
-    {% if paginate.next %}
-    %a(href="?page={{ paginate.next_page }}") Next
-    {% endif %}
+  %section.listings-body
+    %ul.article-list
+      {% for post in paginate.collection %}
+      %li.article-item
+        %a.article-item__link(href="{% path_to post %}")
+          %img.article-item__thumbnail(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
+          .article-item__body
+            .article-item__title {{ post.title }}
+            .article-item__summary {{ post.teaser }}
+            .article-item__meta
+              .u-group
+                .article-item__location
+                  %i.fa.fa-map-marker
+                  {{ post.location }}
+                .article-item__date
+                  %i.fa.fa-clock-o
+                  {{ post.posted_at | date: '%a %d %b %Y' }}
+              .article-item__author
+                %img.article-item__author__image(src="{{ post.author.image.url }}" alt="{{ post.author.first_name | escape }}")
+                .article-item__author__name
+                  %span by {{ post.author.first_name }}
+      {% endfor %}
+    .pagination
+      .pages Showing page {{ paginate.current_page }} of {{ paginate.total_pages }}
+      {% if paginate.previous %}
+      %a(href="?page={{ paginate.previous_page }}") Previous
+      {% endif %}
+      {% if paginate.next %}
+      %a(href="?page={{ paginate.next_page }}") Next
+      {% endif %}
   {% endpaginate %}
   {% else %}
   %h2(style="text-align: center") No more posts!
