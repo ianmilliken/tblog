@@ -26,14 +26,16 @@ $thumbnail_offset: 32rem;
         background-color: $primary_color;
       }
     }
+
+    &__intro {
+      font-size: 1.9rem;
+    }
   }
 
   .listings-body {
     max-width: 76.8rem;
     margin: 4rem auto 0;
   }
-
-  .article-list {}
 
   .article-item {
     border-bottom: 1px solid $grey;
@@ -53,6 +55,7 @@ $thumbnail_offset: 32rem;
 
     &__body {
       width: calc( 100% - #{$thumbnail_offset} );
+      position: relative;
     }
 
     &__title {
@@ -60,6 +63,15 @@ $thumbnail_offset: 32rem;
       font-weight: 600;
       color: $primary_color;
       letter-spacing: -0.056rem;
+      margin-top: 1rem;
+    }
+
+    &__summary {
+      font-family: $serif_font;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      color: $secondary_color;
+      margin-top: 1rem;
     }
 
     &__meta {
@@ -69,6 +81,18 @@ $thumbnail_offset: 32rem;
       font-size: 1.4rem;
       font-weight: 600;
       color: $secondary_color;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    &__location {
+      display: inline-block;
+      margin-right: 2rem;
+    }
+
+    &__date {
+      display: inline-block;
     }
 
     &__author {
@@ -79,6 +103,13 @@ $thumbnail_offset: 32rem;
         border-radius: 3.6rem;
         border: 0.1rem solid $white;
         box-shadow: 0 0.2rem 1rem 0 rgba(0,0,0,0.22);
+        float: left;
+        margin-right: 1rem;
+      }
+
+      &__name {
+        display: inline-block;
+        line-height: 3.4rem;
       }
     }
   }
