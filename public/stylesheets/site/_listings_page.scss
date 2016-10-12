@@ -50,6 +50,7 @@ $thumbnail_offset: 32rem;
     &__thumbnail {
       width: $thumbnail_width;
       height: 19.4rem;
+      object-fit: cover;
       box-shadow: 0 0.2rem 3rem 0 rgba(0,0,0,0.15);
     }
 
