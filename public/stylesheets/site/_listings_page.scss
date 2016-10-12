@@ -5,7 +5,7 @@ $thumbnail_offset: 32rem;
 @include bp-x-small {
 
   .listings-header {
-    max-width: 76.8rem;
+    max-width: 48rem;
     margin: 4rem auto 0;
     text-align: center;
 
@@ -33,7 +33,7 @@ $thumbnail_offset: 32rem;
   }
 
   .listings-body {
-    max-width: 76.8rem;
+    max-width: 48rem;
     margin: 4rem auto 0;
   }
 
@@ -44,6 +44,7 @@ $thumbnail_offset: 32rem;
 
     &__link {
       display: flex;
+      flex-flow: row wrap;
       justify-content: space-between;
     }
 
@@ -153,6 +154,18 @@ $thumbnail_offset: 32rem;
         color: lighten( $secondary_color, 20% );
       }
     }
+  }
+
+}
+
+@include bp-medium {
+
+  .listings-header {
+    max-width: 76.8rem;
+  }
+
+  .listings-body {
+    max-width: 76.8rem;
   }
 
 }
