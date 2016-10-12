@@ -36,15 +36,31 @@ handle: journal
                 .article-item__author__name
                   %span by {{ post.author.first_name }}
       {% endfor %}
-    .pagination
-      .pages Showing page {{ paginate.current_page }} of {{ paginate.total_pages }}
-      {% if paginate.previous %}
-      %a(href="?page={{ paginate.previous_page }}") Previous
-      {% endif %}
-      {% if paginate.next %}
-      %a(href="?page={{ paginate.next_page }}") Next
-      {% endif %}
+
+    .listings-pagination
+      .listings-pagination__entries Showing {{ paginate.per_page }} of {{ paginate.total_entries }} journal entries
+      .listings-pagination__controls
+        .listings-pagination__pages Page {{ paginate.current_page }} of {{ paginate.total_pages }}
+        {% if paginate.previous %}
+        %a.listings-pagination__button(href="?page={{ paginate.previous_page }}")
+          %i.fa.fa-chevron-left
+          Previous
+        {% else %}
+        %a.listings-pagination__button.u-disabled
+          %i.fa.fa-chevron-left
+          Previous
+        {% endif %}
+        {% if paginate.next %}
+        %a.listings-pagination__button(href="?page={{ paginate.next_page }}")
+          Next
+          %i.fa.fa-chevron-right
+        {% else %}
+        %a.listings-pagination__button.u-disabled
+          Next
+          %i.fa.fa-chevron-right
+        {% endif %}
   {% endpaginate %}
+
   {% else %}
   %h2(style="text-align: center") No more posts!
   {% endif %}
