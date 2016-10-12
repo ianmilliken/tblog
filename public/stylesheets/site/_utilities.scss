@@ -27,6 +27,17 @@
   padding-top: 11rem;
 }
 
+.u-disabled {
+  cursor: not-allowed;
+  color: $grey;
+  border-color: $grey;
+
+  &:hover {
+    color: $grey;
+    border-color: $grey;
+  }
+}
+
 @include bp-x-small {
   .u-hide-for-small {
     display: none;
