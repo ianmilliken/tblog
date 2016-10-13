@@ -26,32 +26,33 @@ handle: home
 
 .container.u-spacer
   {% if contents.posts.size > 1 %}
-  %h2(style="text-align: center") Latest journal entries
-  %ul.post-list
-    {% for post in contents.posts %}
-    // Render all but the last (latest) posts here
-    {% if forloop.last == false %}
-    %li.post-item
-      %a.post-link(href="{% path_to post %}")
-        %img.post-image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
-        .post-info
-          .post-title {{ post.title }}
-          .post-summary {{ post.teaser }}
-          .post-meta
-            .post-author
-              %img.post-author__image(src="{{ post.author.image.url }}" alt="{{ post.author.first_name | escape }}")
-              .post-author__name
-                %span.raw by
-                {{ post.author.first_name }}&nbsp;
-              .post-date
-                %span.raw on {{ post.posted_at | date: '%a %d %b %Y' }}
-            .post-location
-              %i.fa.fa-map-marker
-              {{ post.location.city }}, {{ post.location.country }}
+  %section
+    %h2(style="text-align: center") Latest journal entries
+    %ul.post-list
+      {% for post in contents.posts %}
+      // Render all but the last (latest) posts here
+      {% if forloop.last == false %}
+      %li.post-item
+        %a.post-link(href="{% path_to post %}")
+          %img.post-image(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
+          .post-info
+            .post-title {{ post.title }}
+            .post-summary {{ post.teaser }}
+            .post-meta
+              .post-author
+                %img.post-author__image(src="{{ post.author.image.url }}" alt="{{ post.author.first_name | escape }}")
+                .post-author__name
+                  %span.raw by
+                  {{ post.author.first_name }}&nbsp;
+                .post-date
+                  %span.raw on {{ post.posted_at | date: '%a %d %b %Y' }}
+              .post-location
+                %i.fa.fa-map-marker
+                {{ post.location.city }}, {{ post.location.country }}
+      {% endif %}
+      {% endfor %}
+    {% else %}
+    %h2(style="text-align: center") No more posts!
     {% endif %}
-    {% endfor %}
-  {% else %}
-  %h2(style="text-align: center") No more posts!
-  {% endif %}
 
 {% endblock %}
