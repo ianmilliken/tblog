@@ -33,6 +33,10 @@ p {
 .container {
   @include container();
   padding: 0 2rem;
+
+  &__half {
+    @include span(8 of 16);
+  }
 }
 
 .flexbox {
