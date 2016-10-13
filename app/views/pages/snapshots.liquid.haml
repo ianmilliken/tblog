@@ -35,7 +35,7 @@ handle: snapshots
                   {{ snapshot.posted_at | date: '%a %d %b %Y' }}
                 .article-item__location
                   %i.fa.fa-map-marker
-                  {{ snapshot.location }}
+                  {{ snapshot.location.city }}, {{ snapshot.location.country }}
       {% endfor %}
 
     .listings-pagination

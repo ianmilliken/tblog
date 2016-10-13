@@ -34,7 +34,7 @@ handle: journal
                   {{ post.posted_at | date: '%a %d %b %Y' }}
                 .article-item__location
                   %i.fa.fa-map-marker
-                  {{ post.location }}
+                  {{ post.location.city }}, {{ post.location.country }}
       {% endfor %}
 
     .listings-pagination

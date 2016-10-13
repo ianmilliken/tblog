@@ -1,50 +1,51 @@
-# Human readable name of this type
 name: Snapshots
-
-# Lowercase, underscored handle used to access this type
 slug: snapshots
-
-# Explanatory text displayed in the back-office
-description: A description of the content type for the editors
-
-# Slug of field used to identify entries by default, such as the title
 label_field_name: title
-
-# Valid values: manually, created_at, updated_at, or the slug of any field
 order_by: posted_at
 
-# A list describing each field
 fields:
-- title: # The lowercase, underscored name of the field
-    label: Title # Human readable name of the field
+- title:
+    label: Title
     type: string
     required: true
     hint: Explanatory text displayed in the back office
     localized: false
 
-- posted_at: # The lowercase, underscored name of the field
-    label: Posted at # Human readable name of the field
+- posted_at:
+    label: Posted at
     type: date_time
     required: false
     hint: Enter the post publish date
     localized: false
 
-- intro: # The lowercase, underscored name of the field
-    label: Intro # Human readable name of the field
+- location:
+    label: Location
+    type: belongs_to
+    class_name: locations
+    hint: Choose a location for these Snapshots
+
+- author:
+    label: Author
+    type: belongs_to
+    class_name: authors
+    hint: Choose an author for these Snapshots
+
+- intro:
+    label: Intro
     type: text
     required: false
     hint: Enter the intro text
     localized: false
 
-- image: # The lowercase, underscored name of the field
-    label: Image # Human readable name of the field
+- image:
+    label: Image
     type: file
     required: false
     hint: Explanatory text displayed in the back office
     localized: false
 
-- body: # The lowercase, underscored name of the field
-    label: Body # Human readable name of the field
+- body:
+    label: Body
     type: text
     required: false
     hint: Explanatory text displayed in the back office
