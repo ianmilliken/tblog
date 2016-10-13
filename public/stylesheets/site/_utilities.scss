@@ -23,10 +23,6 @@
   border-bottom: 0.1rem solid #E4E4E4;
 }
 
-.u-after-site-nav {
-  padding-top: 11rem;
-}
-
 .u-disabled {
   cursor: not-allowed;
   color: $grey;
@@ -39,19 +35,31 @@
 }
 
 @include bp-x-small {
+
   .u-hide-for-small {
     display: none;
   }
+
   .u-show-for-small {
     display: inherit;
+  }
+
+  .u-after-site-nav {
+    padding-top: 7.2rem;
   }
 }
 
 @include bp-medium {
+
   .u-hide-for-small {
     display: inherit;
   }
+
   .u-show-for-small {
     display: none;
+  }
+
+  .u-after-site-nav {
+    padding-top: 11rem;
   }
 }

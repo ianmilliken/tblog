@@ -24,17 +24,17 @@ handle: journal
             .article-item__title {{ post.title }}
             .article-item__summary {{ post.teaser }}
             .article-item__meta
-              .u-group
-                .article-item__location
-                  %i.fa.fa-map-marker
-                  {{ post.location }}
-                .article-item__date
-                  %i.fa.fa-clock-o
-                  {{ post.posted_at | date: '%a %d %b %Y' }}
               .article-item__author
                 %img.article-item__author__image(src="{{ post.author.image.url }}" alt="{{ post.author.first_name | escape }}")
                 .article-item__author__name
                   %span by {{ post.author.first_name }}
+              .u-group
+                .article-item__date
+                  %i.fa.fa-clock-o
+                  {{ post.posted_at | date: '%a %d %b %Y' }}
+                .article-item__location
+                  %i.fa.fa-map-marker
+                  {{ post.location }}
       {% endfor %}
 
     .listings-pagination
