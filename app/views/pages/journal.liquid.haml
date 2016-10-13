@@ -38,7 +38,7 @@ handle: journal
       {% endfor %}
 
     .listings-pagination
-      .listings-pagination__entries Showing {{ paginate.per_page }} of {{ paginate.total_entries }} journal entries
+      .listings-pagination__entries.u-hide-for-small Showing {{ paginate.per_page }} of {{ paginate.total_entries }} journal entries
       .listings-pagination__controls
         .listings-pagination__pages Page {{ paginate.current_page }} of {{ paginate.total_pages }}
         {% if paginate.previous %}
