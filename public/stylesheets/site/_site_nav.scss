@@ -42,11 +42,6 @@
     &__link {
       display: block;
       color: $secondary_color;
-      //font-size: 1.3rem;
-      //font-weight: 700;
-      //font-weight: 600;
-      //letter-spacing: 0.042rem;
-      //text-transform: uppercase;
 
       &--white {
         color: $white;
@@ -67,29 +62,43 @@
 
     &__hamburger {
 
-      & span {
-        display: block;
+      &__group {
+        height: 4rem;
+        width: 4rem;
         position: relative;
-        width: 1.6rem;
-        height: 0.2rem;
+      }
+
+      &__icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 80%;
+        height: 0.4rem;
         background-color: $secondary_color;
 
-        &::before {
+        &::before, &::after {
           content: "";
           position: absolute;
-          top: -0.6rem;
-          width: 1.6rem;
-          height: 0.2rem;
+          top: -1rem;
+          width: 100%;
+          height: 0.4rem;
           background-color: $secondary_color;
         }
 
         &::after {
-          content: "";
-          position: absolute;
-          bottom: -0.6rem;
-          width: 1.6rem;
-          height: 0.2rem;
-          background-color: $secondary_color;
+          top: 1rem;
+        }
+
+        &--white {
+          @extend .site-nav__hamburger__icon;
+          background-color: $white;
+
+          &::before, &::after {
+            background-color: $white;
+          }
         }
       }
     }
