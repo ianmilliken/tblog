@@ -47,7 +47,7 @@ handle: home
                 %span.raw on {{ post.posted_at | date: '%a %d %b %Y' }}
             .post-location
               %i.fa.fa-map-marker
-              {{ post.location }}
+              {{ post.location.city }}, {{ post.location.country }}
     {% endif %}
     {% endfor %}
   {% else %}
