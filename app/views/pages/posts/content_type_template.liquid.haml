@@ -11,7 +11,7 @@ content_type: posts
     .container.u-center-group
       .p-banner__background(style="background-image: url({{ post.image.url }})")
       .u-group
-        .p-banner__location {{ post.location }}
+        .p-banner__location {{ post.location.city }}, {{ post.location.country }}
         .p-banner__title {{ post.title }}
         .p-banner__teaser {{ post.teaser }}
 
