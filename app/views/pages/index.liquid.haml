@@ -28,24 +28,25 @@ handle: home
   // JOURNAL POSTS
   {% if contents.posts.size > 1 %}
   %section.container__half
-    %h2 Latest journals
-    %ul.article-list
-      {% for post in contents.posts %}
-      // Render all but the last (latest) posts here
-      {% if forloop.last == false %}
-      %li.article-item
-        %a.article-item__link(href="{% path_to post %}")
-          %img.article-item__thumbnail(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
-          .article-item__body
-            .article-item__title {{ post.title }}
-            .article-item__summary {{ post.teaser }}
-            .article-item__meta
-              .u-group
-                .article-item__date
-                  %i.fa.fa-clock-o
-                  {{ post.posted_at | date: '%a %d %b %Y' }}
-      {% endif %}
-      {% endfor %}
+    %h2.listings-header__title Latest journals
+    %section.listings-body
+      %ul.article-list
+        {% for post in contents.posts %}
+        // Render all but the last (latest) posts here
+        {% if forloop.last == false %}
+        %li.article-item--small
+          %a.article-item__link(href="{% path_to post %}")
+            %img.article-item__thumbnail--small(src="{{ post.image.url }}" alt="{{ post.title | escape }}")
+            .article-item__body--small
+              .article-item__title {{ post.title }}
+              .article-item__summary {{ post.teaser }}
+              .article-item__meta
+                .u-group
+                  .article-item__date
+                    %i.fa.fa-clock-o
+                    {{ post.posted_at | date: '%a %d %b %Y' }}
+        {% endif %}
+        {% endfor %}
     {% else %}
     %h2(style="text-align: center") No more posts!
     {% endif %}
@@ -53,21 +54,22 @@ handle: home
   // SNAPSHOTS
   {% if contents.snapshots.size > 0 %}
   %section.container__half
-    %h2 Latest snapshots
-    %ul.article-list
-      {% for snapshot in contents.snapshots %}
-      %li.article-item
-        %a.article-item__link(href="{% path_to snapshot %}")
-          %img.article-item__thumbnail(src="{{ snapshot.image.url }}" alt="{{ snapshot.title | escape }}")
-          .article-item__body
-            .article-item__title {{ snapshot.title }}
-            .article-item__summary {{ snapshot.teaser }}
-            .article-item__meta
-              .u-group
-                .article-item__date
-                  %i.fa.fa-clock-o
-                  {{ snapshot.posted_at | date: '%a %d %b %Y' }}
-      {% endfor %}
+    %h2.listings-header__title Latest snapshots
+    %section.listings-body
+      %ul.article-list
+        {% for snapshot in contents.snapshots %}
+        %li.article-item--small
+          %a.article-item__link(href="{% path_to snapshot %}")
+            %img.article-item__thumbnail--small(src="{{ snapshot.image.url }}" alt="{{ snapshot.title | escape }}")
+            .article-item__body--small
+              .article-item__title {{ snapshot.title }}
+              .article-item__summary {{ snapshot.teaser }}
+              .article-item__meta
+                .u-group
+                  .article-item__date
+                    %i.fa.fa-clock-o
+                    {{ snapshot.posted_at | date: '%a %d %b %Y' }}
+        {% endfor %}
     {% else %}
     %h2(style="text-align: center") No more snapshots!
     {% endif %}
