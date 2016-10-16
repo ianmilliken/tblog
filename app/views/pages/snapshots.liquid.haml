@@ -39,7 +39,12 @@ handle: snapshots
       {% endfor %}
 
     .listings-pagination
-      .listings-pagination__entries.u-hide-for-small Showing {{ paginate.per_page }} of {{ paginate.total_entries }} snapshot entries
+      .listings-pagination__entries.u-hide-for-small
+        {% if paginate.per_page > paginate.total_entries %}
+        Showing {{ paginate.total_entries }} of {{ paginate.total_entries }} snapshot entries
+        {% else %}
+        Showing {{ paginate.per_page }} of {{ paginate.total_entries }} snapshot entries
+        {% endif %}
       .listings-pagination__controls
         .listings-pagination__pages Page {{ paginate.current_page }} of {{ paginate.total_pages }}
         {% if paginate.previous %}
