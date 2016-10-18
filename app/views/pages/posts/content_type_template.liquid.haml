@@ -11,9 +11,11 @@ content_type: posts
     .container.u-center-group
       .p-banner__background(style="background-image: url({{ post.image.url }})")
       .u-group
-        .p-banner__location {{ post.location.city }}, {{ post.location.country }}
+        .p-banner__location
+          %i.fa.fa-map-marker
+          {{ post.location.city }}, {{ post.location.country }}
         .p-banner__title {{ post.title }}
-        .p-banner__teaser {{ post.teaser }}
+        .p-banner__teaser.u-hide-for-small {{ post.teaser }}
 
   .container
     %section.j-post__body

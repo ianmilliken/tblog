@@ -19,7 +19,7 @@ handle: home
         %i.fa.fa-map-marker
         {{ post.location.city }}, {{ post.location.country }}
       .p-banner__title {{ post.title }}
-      .p-banner__teaser {{ post.teaser }}
+      .p-banner__teaser.u-hide-for-small {{ post.teaser }}
       %a.p-banner__button(href="{% path_to post %}") Read More
     {% endif %}
     {% endfor %}

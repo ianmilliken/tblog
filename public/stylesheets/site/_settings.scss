@@ -31,6 +31,11 @@ $black: #000;
 $grey: #EDEDED;
 $white: #FEFEFE;
 
+$primary_color_hover: lighten( $primary_color, 20% );
+$secondary_color_hover: lighten( $secondary_color, 20% );
+
+$white_hover: darken( $white, 20% );
+
 // 3. Breakpoints
 // ---------
 $extra_small_width: 320px;

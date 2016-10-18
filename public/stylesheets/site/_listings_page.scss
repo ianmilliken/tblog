@@ -7,7 +7,8 @@ $thumbnail_small_offset: 22rem;
 @include bp-x-small {
 
   .listings-header {
-    max-width: 48rem;
+    max-width: 54rem;
+    width: 100%;
     margin: 4rem auto 0;
     text-align: center;
 
@@ -32,12 +33,13 @@ $thumbnail_small_offset: 22rem;
     }
 
     &__intro {
-      font-size: 1.9rem;
+      font-size: 1.6rem;
     }
   }
 
   .listings-body {
-    max-width: 48rem;
+    max-width: 54rem;
+    width: 100%;
     margin: 4rem auto 0;
   }
 
@@ -80,11 +82,12 @@ $thumbnail_small_offset: 22rem;
       color: $primary_color;
       letter-spacing: -0.056rem;
       margin-top: 2rem;
+      line-height: 1.26;
     }
 
     &__summary {
       font-family: $serif_font;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       line-height: 1.5;
       color: $secondary_color;
       margin-top: 1rem;
@@ -159,8 +162,8 @@ $thumbnail_small_offset: 22rem;
       }
 
       &:hover {
-        border-color: lighten( $secondary_color, 20% );
-        color: lighten( $secondary_color, 20% );
+        border-color: $secondary_color_hover;
+        color: $secondary_color_hover;
       }
     }
   }
@@ -171,6 +174,10 @@ $thumbnail_small_offset: 22rem;
 
   .listings-header {
     max-width: 76.8rem;
+
+    &__intro {
+      font-size: 1.9rem;
+    }
   }
 
   .listings-body {
@@ -198,6 +205,12 @@ $thumbnail_small_offset: 22rem;
         width: $thumbnail_small_width;
         height: 13.4rem;
       }
+    }
+
+    &__summary {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     &__body {
